@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css.css" />
+    	<link rel="stylesheet" href="css.css" />
+		<style>
+
+		</style>
+	</head>
+    <body onLoad="generate_table()">
+        <div class="global">
+            <div class="left_half" id="left_half">
+				<div class="arrow_section">
+					<button  id="e" class="button_arrow" onclick="mat();">
+						<div class="wrap">
+							<div class="rect_part">
+								<div class="button_arrow_content">Умножить матрицы</div>
+							</div>
+							<div class="triangle_part">
+								<div class="triangle">
+									<div class="triangle_back"></div>
+								</div>
+							</div>
+						</div>
+					</button>
+				</div>
+
+				<div class="buttons_section">
+					<button id="clear_matrix" class="button" onClick="tst.reset();">
+						<i class="icon icon-refresh"></i>Очистить матрицы
+					</button>
+					<button class="button change_matrix" onClick="change();">
+						<i class="icon icon-mix"></i>Поменять матрицы местами
+					</button>
+				</div>
+
+				<div class="radio_section">
+                    <input type="radio" class="radio" id="matrix_a" name="matrix" onClick="workA();">
+                    <label for="matrix_a">Матрица A</label>
+
+                    <input type="radio" class="radio" id="matrix_b" name="matrix" onClick="workB();" checked>
+                    <label for="matrix_b">Матрица В</label>
+				</div>
+
+				<div class="activity_section">
+					<button id="ins_row" class="button ins_row" onclick="addRow()">
+						<i class="icon icon-plus"></i>Добавить
+					</button>
+					<button id="del_row" class="button del_row" onclick="delRow()">
+						<i class="icon icon-minus"></i>Удалить
+					</button><span>строку</span>
+					<button id="ins_d" class="button ins_d" onclick="addDataA()">
+						<i class="icon icon-plus"></i>Добавить
+					</button>
+					<button id="del_d" class="button del_d" onClick="delDataA()">
+						<i class="icon icon-minus"></i>Удалить
+					</button><span>столбец</span>
+				</div>
+                
+				<div class="error_section">
+					<span id="error">Такие матрицы нельзя перемножить, так как количество столбцов матрицы А не равно количеству строк матрицы В</span>
+				</div>
+            </div>
+
+            <form id="tst" class="right_half">
+                <table class="main_table">
+                    <tbody>
+                        <tr>
+                            <td class="bracket left_br"></td>
+                            <td ><table class="out_matrix"></table></td>
+                            <td class="bracket right_br"></td>
+                            <td class="mid"></td>
+                            <td class="bracket left_br"></td>
+                            <td id="a_table"><table class="a_matrix"></table></td>
+                            <td class="bracket right_br"></td>
+                            <td id="a" class="matrix_name">A</td>
+                        </tr>
+                        <tr class="mid">
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td class="bracket left_br"></td>
+                            <td id="b_table"><table class="b_matrix"></table></td>
+                            <td class="bracket right_br"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td ></td>
+                        </tr>
+                        <tr>
+                            <td ></td>
+                            <td id="b" class="matrix_name">B</td>
+                            <td ></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td ></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+		</div>
+
+		<script type="text/javascript" src="js.js"></script>
+    </body>
+</html>
